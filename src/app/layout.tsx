@@ -48,8 +48,8 @@ const geistSans = Geist({
 });
 
 export const metadata = {
-  title: 'Your Portfolio',
-  description: 'A personal portfolio website',
+  title: 'PHEARUNMONY CHHENG',
+  description: '',
 };
 
 // export default function RootLayout({ children }) {
