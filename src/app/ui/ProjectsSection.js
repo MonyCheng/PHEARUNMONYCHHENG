@@ -1,11 +1,6 @@
 import React from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faGithub } from '@fortawesome/free-brands-svg-icons';
-// import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-
-
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 const ProjectsSection = () => {
     const projects = [
         {
