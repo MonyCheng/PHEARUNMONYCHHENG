@@ -1,103 +1,162 @@
-import Image from "next/image";
+import Navbar from '../app/ui/Navbar';
+import HeroSection from '../app/ui/HeroSection';
+import AboutSection from '../app/ui/AboutSection';
+import ProjectsSection from '../app/ui/ProjectsSection';
+import SkillsSection from '../app/ui/SkillsSection';
+import SectionDivider from '../app/ui/SectionDivider';
+import SkillSection from "./ui/SkillSection";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    <header className="bg-slate-900 text-slate-400">
+      <Navbar />
+      <HeroSection />
+      <AboutSection />
+      <SectionDivider />
+      <SkillSection />
+      <SectionDivider />
+      <ProjectsSection />
+      <SectionDivider />
+      <SkillsSection />
+    </header>
+  )
 }
+
+// export default function Home() {
+//   return (
+//     <div className="min-h-screen bg-slate-900 text-slate-400 antialiased leading-relaxed selection:bg-teal-300 selection:text-teal-900">
+//       <div className="max-w-5xl mx-auto px-6 py-12 font-sans">
+//         <header className="mb-12">
+//           <h1 className="text-4xl sm:text-5xl font-bold text-slate-200">Phearunmony chheng</h1>
+//           <h2 className="mt-3 text-xl font-medium text-slate-200">iOS Developer</h2>
+//           <p className="mt-4">
+//             I build accessible, pixel-perfect digital experiences for Mobile Banking for Woori Bank & Prince Bank{" "}
+//             <span className="font-semibold text-slate-200">
+//               Cambodia
+//             </span>.
+//           </p>
+//         </header>
+//         <main className="space-y-10">
+//           <section id="experience">
+//             <h3 className="text-2xl font-bold text-slate-200 mb-6">Experience</h3>
+//             <div className="mb-12">
+//               <h4 className="text-xl font-bold text-slate-100 mb-4">Prince Bank</h4>
+//               <ol className="relative border-l border-slate-700 pl-6 space-y-10">
+//                 <li className="relative">
+//                   <div className="flex items-center gap-3">
+//                     <span className="timeline-dot timeline-dot-red" />
+//                     <h5 className="text-lg font-semibold text-slate-200 ml-2">
+//                       Assistant Manager, iOS Engineering
+//                     </h5>
+//                   </div>
+//                   <p className="text-sm text-slate-200 pl-6">October 2024 – Present</p>
+//                   <p className="mt-2 text-slate-400 pl-6">
+//                     Leading modernization of mobile apps using Swift and clean architecture.
+//                   </p>
+//                   <ul className="mt-2 pl-12 space-y-2 text-sm text-slate-400 list-disc">
+//                     <li>
+//                       <Link href="https://www.princebank.com.kh/digital/prince-mobile-app"
+//                         className="text-teal-100 underline hover:text-teal-300 transition"
+//                         target="_blank"
+//                         rel="noopener noreferrer">
+//                         Digital Banking
+//                       </Link>
+//                     </li>
+//                     <li>
+//                       <Link href="https://www.princebank.com.kh/digital/prince-mobilebiz"
+//                         className="text-teal-100 underline hover:text-teal-300 transition"
+//                         target="_blank"
+//                         rel="noopener noreferrer">
+//                         Mobile Biz
+//                       </Link>
+//                     </li>
+//                   </ul>
+//                   <p className="mt-4 text-slate-400 pl-6">
+//                     Coordinated with <span className="font-semibold text-slate-200">vendors</span>, managed project timelines, and collaborated with <span className="font-semibold text-slate-200">UX/UI designers</span> in agile cycles.
+//                     Solid experience in <span className="font-semibold text-slate-200">Git</span>, <span className="font-semibold text-slate-200">gRPC</span>, and <span className="font-semibold text-slate-200">code reviews</span>.
+//                   </p>
+//                 </li>
+//               </ol>
+//             </div>
+//             <div>
+//               <h4 className="text-xl font-bold text-slate-100 mb-4">Woori Bank</h4>
+//               <ol className="relative border-l border-slate-700 pl-6 space-y-10">
+//                 <li className="relative">
+//                   <div className="flex items-center gap-3">
+//                     <span className="timeline-dot timeline-dot-purple" />
+//                     <h5 className="text-lg font-semibold text-slate-200 ml-2">
+//                       Senior Officer, Mobile Development
+//                     </h5>
+//                   </div>
+//                   <p className="text-sm text-slate-200 pl-6">
+//                     April 2024 – October 2024
+//                   </p>
+//                   <p className="mt-4 text-slate-400 pl-6">
+//                     Collaborated with <span className="font-semibold text-slate-200">Scrum teams</span>, using <span className="font-semibold text-slate-200">Jira</span> for agile planning.
+//                     Gained experience in <span className="font-semibold text-slate-200">REST APIs</span>, Git, and collaborative development.
+//                   </p>
+//                 </li>
+
+//                 <li className="relative">
+//                   <div className="flex items-center gap-3">
+//                     <span className="timeline-dot timeline-dot-blue" />
+//                     <h5 className="text-lg font-semibold text-slate-200 ml-2">
+//                       Junior Mobile Developer
+//                     </h5>
+//                   </div>
+//                   <p className="text-sm text-slate-200 pl-6">
+//                     April 2022 – April 2024</p>
+//                   <p className="mt-2 text-slate-400 pl-6">
+//                     Contributed to mobile product development and maintenance:
+//                   </p>
+//                   <ul className="mt-2 pl-12 space-y-2 text-sm text-slate-400 list-disc">
+//                     <li>
+//                       <Link href="https://www.wooribank.com.kh/personal-banking/mobile-banking/"
+//                         className="text-teal-100 underline hover:text-teal-300 transition"
+//                         target="_blank" rel="noopener noreferrer">
+//                         Mobile Banking
+//                       </Link>
+//                     </li>
+//                     <li>Loan Collection (Internal App)</li>
+//                     <li>Loan Application (Internal App)</li>
+//                     <li>Tab Banking (Internal App)</li>
+//                   </ul>
+//                 </li>
+//               </ol>
+//             </div>
+//           </section>
+//           <section id="projects">
+//             <h3 className="text-2xl font-bold text-slate-200 mb-4">Projects</h3>
+//           </section>
+//           <section id="projects">
+//             <h3 className="text-2xl font-bold text-slate-200 mb-6">Experience</h3>
+//             <div className="mb-12">
+//               <h4 className="text-xl font-bold text-slate-100 mb-4">Setec institute</h4>
+//               <ol className="relative border-l border-slate-700 pl-6 space-y-10">
+//                 <li className="relative">
+//                   <div className="flex items-center gap-3">
+//                     <span className="timeline-dot timeline-green-dot" />
+//                     <h5 className="text-lg font-semibold text-slate-200 ml-2">
+//                       Management information system
+//                     </h5>
+//                   </div>
+//                   <p className="text-sm text-slate-200 pl-6">October 2024 – Present</p>
+//                   <p className="mt-2 text-slate-400 pl-6">
+//                     Leading modernization of mobile apps using Swift and clean architecture.
+//                   </p>
+//                 </li>
+//               </ol>
+//             </div>
+
+//           </section>
+//           <section id="about">
+//             <h3 className="text-2xl font-bold text-slate-200 mb-4">About</h3>
+//             <p>
+//               I'm passionate about building smooth, interactive apps with Swift, Kotlin, and modern web tech.
+//             </p>
+//           </section>
+//         </main>
+//       </div>
+//     </div >
+//   );
+// }
