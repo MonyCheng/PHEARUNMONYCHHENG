@@ -1,11 +1,11 @@
-'use client'; // Add this line at the very top
+'use client';
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 const HeroSection = () => {
     const [typingText, setTypingText] = useState('');
-    const fullText = ' I build accessible, pixel-perfect digital experiences for Mobile Banking for Woori Bank & Prince Bank Cambodia';
+    const fullText = 'I build accessible, pixel-perfect digital experiences for Mobile Banking for Woori Bank & Prince Bank Cambodia';
     const typingSpeed = 100;
 
     useEffect(() => {
@@ -25,10 +25,18 @@ const HeroSection = () => {
     return (
         <section id="home" className="hero-section min-h-screen flex items-center justify-center relative">
             {/* Floating Code Elements */}
-            <div className="floating-code top-50 left-30" style={{ animationDelay: '-6s' }}>var skills = ['Swift', 'Flutter', 'Next.JS'];</div>
-            <div className="floating-code top-40 right-20" style={{ animationDelay: '-3s' }}>func () &#123; return 'innovation'; &#125;</div>
-            <div className="floating-code bottom-32 left-20" style={{ animationDelay: '-2s' }}>&lt;div className="developer-mindset"&gt;</div>
-            <div className="floating-code bottom-20 right-10" style={{ animationDelay: '-4s' }}>git commit -m "Level up complete"</div>
+            <div className="floating-code top-50 left-30" style={{ animationDelay: '-6s' }}>
+                var skills = [&apos;Swift&apos;, &apos;Flutter&apos;, &apos;Next.JS&apos;];
+            </div>
+            <div className="floating-code top-40 right-20" style={{ animationDelay: '-3s' }}>
+                func () &#123; return &apos;innovation&apos;; &#125;
+            </div>
+            <div className="floating-code bottom-32 left-20" style={{ animationDelay: '-2s' }}>
+                &lt;div className=&quot;developer-mindset&quot;&gt;
+            </div>
+            <div className="floating-code bottom-20 right-10" style={{ animationDelay: '-4s' }}>
+                git commit -m &quot;Level up complete&quot;
+            </div>
 
             <div className="text-center z-10 max-w-4xl mx-auto px-6">
                 <div className="mb-6">

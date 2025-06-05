@@ -16,7 +16,7 @@ const ContactSection = () => {
                 <div className="grid md:grid-cols-2 gap-8">
                     {/* Contact Form */}
                     <div className="contact-form rounded-lg p-8">
-                        <h3 className="text-2xl font-semibold mb-6 text-green-400">Let's Connect!</h3>
+                        <h3 className="text-2xl font-semibold mb-6 text-green-400">Let&apos;s Connect!</h3>
                         <form>
                             <div className="mb-4">
                                 <label htmlFor="name" className="block text-gray-300 text-sm font-bold mb-2">Name</label>
@@ -39,14 +39,14 @@ const ContactSection = () => {
                     {/* Contact Info */}
                     <div className="space-y-6">
                         <h3 className="text-2xl font-semibold mb-6 text-green-400">Contact Information</h3>
-                        <p className="text-gray-300">Feel free to reach out! I'm open to new opportunities and collaborations.</p>
+                        <p className="text-gray-300">Feel free to reach out! I&apos;m open to new opportunities and collaborations.</p>
                         <div className="flex items-center space-x-3 text-gray-400">
                             <FontAwesomeIcon icon={faMapMarkerAlt} className="text-green-400" />
-                            <span>Phnom Penh, Cambodia</span> {/* Replace with your actual location */}
+                            <span>Phnom Penh, Cambodia</span>
                         </div>
                         <div className="flex items-center space-x-3 text-gray-400">
                             <FontAwesomeIcon icon={faEnvelope} className="text-green-400" />
-                            <span>your.email@example.com</span> {/* Replace with your actual email */}
+                            <span>your.email@example.com</span>
                         </div>
                         <div className="flex space-x-4 mt-4">
                             <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
@@ -55,7 +55,6 @@ const ContactSection = () => {
                             <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
                                 <FontAwesomeIcon icon={faLinkedin} size="lg" />
                             </a>
-                            {/* Add more social links as needed */}
                         </div>
                     </div>
                 </div>
