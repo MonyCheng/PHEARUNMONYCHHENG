@@ -20,20 +20,13 @@ const SkillsSection = () => {
         { name: 'Kotlin', icon: faCss3Alt, color: '#1572B6' },
         { name: 'Flutter', icon: faFlutter, color: '#F7DF1E' },
         { name: 'Next.JS', icon: NEXT_HMR_REFRESH_HASH_COOKIE, color: '#61DAFB' },
-        // { name: 'Node.js', icon: faNodeJs, color: '#68A06A' },
-        // { name: 'Python', icon: faPython, color: '#3776AB' },
-        // { name: 'Git', icon: faGitAlt, color: '#F05032' },
-        // { name: 'Databases', icon: faDatabase, color: '#00758F' },
-        // Add more skills as needed
     ];
 
     return (
         <section id="skills" className="py-20">
             <div className="container mx-auto px-6">
                 <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-                    {/* <span className="code-font text-green-400">&lt;</span> */}
                     <span className="gradient-text">My Skills</span>
-                    {/* <span className="code-font text-green-400">/&gt;</span> */}
                 </h2>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
