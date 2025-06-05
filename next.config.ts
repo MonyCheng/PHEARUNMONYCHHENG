@@ -4,4 +4,10 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
+module.exports = {
+  images: {
+    domains: ['brandlogos.net'],
+  },
+};
+
 export default nextConfig;
