@@ -1,17 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faHtml5,
     faCss3Alt,
-    faJs,
-    faReact,
-    faNodeJs,
-    faPython,
-    faGitAlt,
     faSwift,
     faFlutter,
 } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { NEXT_HMR_REFRESH_HASH_COOKIE } from 'next/dist/client/components/app-router-headers';
 
 const SkillsSection = () => {
