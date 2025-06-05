@@ -1,9 +1,9 @@
-import Navbar from '../app/ui/Navbar';
-import HeroSection from '../app/ui/HeroSection';
-import AboutSection from '../app/ui/AboutSection';
-import ProjectsSection from '../app/ui/ProjectsSection';
-import SkillsSection from '../app/ui/SkillsSection';
-import SectionDivider from '../app/ui/SectionDivider';
+import Navbar from './ui/Navbar';
+import HeroSection from './ui/HeroSection';
+import AboutSection from './ui/AboutSection';
+import ProjectsSection from './ui/ProjectsSection';
+import SkillsSection from './ui/SkillsSection';
+import SectionDivider from './ui/SectionDivider';
 import SkillSection from "./ui/SkillSection";
 
 export default function Home() {

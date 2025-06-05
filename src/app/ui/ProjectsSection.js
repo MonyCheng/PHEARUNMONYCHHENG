@@ -1,5 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 const ProjectsSection = () => {
     const projects = [
@@ -50,7 +50,7 @@ const ProjectsSection = () => {
                     {projects.map((project, index) => (
                         <div key={index} className="project-card rounded-xl p-6">
                             <div className="bg-gradient-to-br from-blue-500 to-purple-100 h-48 rounded-lg mb-4 flex items-center justify-center">
-                                <img src={project.icon} alt={`${project.title}`} width={300} height={300} className="h-24 object-contain" />
+                                <Image src={project.icon} alt={`${project.title}`} width={300} height={300} className="h-24 object-contain" />
 
                             </div>
                             <h1 className="md:text-xl font-bold text-white mb-3">
