@@ -5,6 +5,7 @@ import ProjectsSection from './ui/ProjectsSection';
 import SkillsSection from './ui/SkillsSection';
 import SectionDivider from './ui/SectionDivider';
 import SkillSection from "./ui/SkillSection";
+import ContactSection from "./ui/ContactSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,8 @@ export default function Home() {
       <ProjectsSection />
       <SectionDivider />
       <SkillsSection />
+      <SectionDivider />
+      <ContactSection />
     </header>
   )
 }

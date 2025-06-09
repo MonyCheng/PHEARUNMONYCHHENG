@@ -26,7 +26,6 @@ const SkillsSection = () => {
                     {skills.map((skill, index) => (
                         <div key={index} className="skill-card rounded-lg p-6 flex flex-col items-center justify-center hover:shadow-lg hover:shadow-green-500/20">
                             <div className="text-5xl mb-3" style={{ color: skill.color }}>
-                                <FontAwesomeIcon icon={skill.icon} />
                             </div>
                             <h3 className="text-xl font-semibold text-center">{skill.name}</h3>
                         </div>

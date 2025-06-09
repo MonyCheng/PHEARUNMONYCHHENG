@@ -13,7 +13,7 @@ const SkillSection = () => {
             duration: '3 years',
         },
         {
-            icon: '',
+            icon: '🌎',
             title: 'Next.js',
             progress: 92,
             description: 'From basics to advanced Python concepts including OOP, data structures.',
@@ -34,9 +34,7 @@ const SkillSection = () => {
         <section id="courses" className="py-20">
             <div className="container mx-auto px-6">
                 <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-                    {/* <span className="code-font text-green-400">&lt;</span> */}
-                    <span className="gradient-text">Skills</span>
-                    {/* <span className="code-font text-green-400">/&gt;</span> */}
+                    <span className="gradient-text">Development</span>
                 </h2>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

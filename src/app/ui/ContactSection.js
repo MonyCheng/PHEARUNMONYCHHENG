@@ -8,14 +8,11 @@ const ContactSection = () => {
         <section id="contact" className="py-20 bg-gray-900/50">
             <div className="container mx-auto px-6">
                 <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-                    <span className="code-font text-green-400">&lt;</span>
                     <span className="gradient-text">Contact Me</span>
-                    <span className="code-font text-green-400">/&gt;</span>
                 </h2>
 
                 <div className="grid md:grid-cols-2 gap-8">
-                    {/* Contact Form */}
-                    <div className="contact-form rounded-lg p-8">
+                    {/* <div className="contact-form rounded-lg p-8">
                         <h3 className="text-2xl font-semibold mb-6 text-green-400">Let&apos;s Connect!</h3>
                         <form>
                             <div className="mb-4">
@@ -34,9 +31,8 @@ const ContactSection = () => {
                                 Send Message
                             </button>
                         </form>
-                    </div>
+                    </div> */}
 
-                    {/* Contact Info */}
                     <div className="space-y-6">
                         <h3 className="text-2xl font-semibold mb-6 text-green-400">Contact Information</h3>
                         <p className="text-gray-300">Feel free to reach out! I&apos;m open to new opportunities and collaborations.</p>
