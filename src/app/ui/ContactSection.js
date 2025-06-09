@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const ContactSection = () => {
@@ -38,17 +38,21 @@ const ContactSection = () => {
                         <p className="text-gray-300">Feel free to reach out! I&apos;m open to new opportunities and collaborations.</p>
                         <div className="flex items-center space-x-3 text-gray-400">
                             <FontAwesomeIcon icon={faMapMarkerAlt} className="text-green-400" />
-                            <span>Phnom Penh, Cambodia</span>
+                            <span>Russey Keo, Phnom Penh, Cambodia</span>
+                        </div>
+                        <div className="flex items-center space-x-3 text-gray-400">
+                            <FontAwesomeIcon icon={faPhone} className="text-green-400" />
+                            <span>069216353</span>
                         </div>
                         <div className="flex items-center space-x-3 text-gray-400">
                             <FontAwesomeIcon icon={faEnvelope} className="text-green-400" />
-                            <span>your.email@example.com</span>
+                            <span>pcheng089@gmail.com</span>
                         </div>
                         <div className="flex space-x-4 mt-4">
-                            <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
+                            <a href="https://github.com/MonyCheng" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
                                 <FontAwesomeIcon icon={faGithub} size="lg" />
                             </a>
-                            <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
+                            <a href="https://www.linkedin.com/in/phearunmony-chheng-45a4a5231/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
                                 <FontAwesomeIcon icon={faLinkedin} size="lg" />
                             </a>
                         </div>
