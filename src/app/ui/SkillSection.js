@@ -48,7 +48,7 @@ const SkillSection = () => {
                                     <span>{course.progress}%</span>
                                 </div>
                                 <div className="w-full bg-gray-700 rounded-full h-2">
-                                    <div className="progress-bar h-2 rounded-full" style={{ width: `${course.progress}%` }}></div>
+                                    <div className="progress-bar2 h-2 rounded-full" style={{ width: `${course.progress}%` }}></div>
                                 </div>
                             </div>
                             <p className="text-gray-300 mb-4">{course.description}</p>

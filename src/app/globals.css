@@ -216,6 +216,10 @@ body {
   animation: shimmer 2s infinite;
 }
 
+.progress-bar2 {
+  background: linear-gradient(90deg, #4ade80, #3b82f6, #8b5cf6);
+}
+
 @keyframes shimmer {
   0% {
     background-position: -200% 0;
