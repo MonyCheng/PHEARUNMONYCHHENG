@@ -1,6 +1,7 @@
 import Navbar from './ui/Navbar';
 import HeroSection from './ui/HeroSection';
 import AboutSection from './ui/AboutSection';
+import WorkingJournetSection from './ui/WorkingJourneySection'
 import ProjectsSection from './ui/ProjectsSection';
 import SkillsSection from './ui/SkillsSection';
 import SectionDivider from './ui/SectionDivider';
@@ -13,6 +14,8 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <AboutSection />
+      <SectionDivider />
+      <WorkingJournetSection />
       <SectionDivider />
       <SkillSection />
       <SectionDivider />

@@ -34,7 +34,16 @@ const ProjectsSection = () => {
             tags: ['Swift'],
             github: '#',
             demo: '#',
+        },
+        {
+            icon: '/assets/icons/mobileBiz.png',
+            title: 'PRINCE MobileBiz',
+            description: 'An enterprise-grade mobile banking app designed for companies and organizations, supporting multi-receiver transfers to any bank, loan requests, and deposits. Includes user roles with a maker-checker-approver workflow and detailed transaction tracking for secure financial operations.',
+            tags: ['Swift'],
+            github: '#',
+            demo: '#',
         }
+
     ];
 
     return (
