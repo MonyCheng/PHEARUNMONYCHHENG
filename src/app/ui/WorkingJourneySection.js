@@ -1,6 +1,4 @@
 
-import Link from 'next/link';
-
 const WorkingJournetSection = () => {
     return (
         <div className="min-h-screen bg-slate-900 text-slate-400 antialiased leading-relaxed selection:bg-teal-300 selection:text-teal-900">
