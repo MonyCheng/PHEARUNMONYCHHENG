@@ -25,7 +25,7 @@ const ContactSection = () => {
                         </div>
                         <div className="flex items-center space-x-3 text-gray-400">
                             <FontAwesomeIcon icon={faEnvelope} className="text-green-400" />
-                            {/* <span>pcheng089@gmail.com</span> */}
+                            <span>pcheng089@gmail.com</span>
                         </div>
                         <div className="flex space-x-4 mt-4">
                             <a href="https://github.com/MonyCheng" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
