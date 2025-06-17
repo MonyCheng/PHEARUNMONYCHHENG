@@ -12,27 +12,6 @@ const ContactSection = () => {
                 </h2>
 
                 <div className="grid md:grid-cols-2 gap-8">
-                    {/* <div className="contact-form rounded-lg p-8">
-                        <h3 className="text-2xl font-semibold mb-6 text-green-400">Let&apos;s Connect!</h3>
-                        <form>
-                            <div className="mb-4">
-                                <label htmlFor="name" className="block text-gray-300 text-sm font-bold mb-2">Name</label>
-                                <input type="text" id="name" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border-gray-700" placeholder="Your Name" />
-                            </div>
-                            <div className="mb-4">
-                                <label htmlFor="email" className="block text-gray-300 text-sm font-bold mb-2">Email</label>
-                                <input type="email" id="email" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border-gray-700" placeholder="Your Email" />
-                            </div>
-                            <div className="mb-6">
-                                <label htmlFor="message" className="block text-gray-300 text-sm font-bold mb-2">Message</label>
-                                <textarea id="message" rows="5" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-800 border-gray-700" placeholder="Your Message"></textarea>
-                            </div>
-                            <button type="submit" className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-blue-500 hover:to-green-500 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transition-colors duration-300">
-                                Send Message
-                            </button>
-                        </form>
-                    </div> */}
-
                     <div className="space-y-6">
                         <h3 className="text-2xl font-semibold mb-6 text-green-400">Contact Information</h3>
                         <p className="text-gray-300">Feel free to reach out! I&apos;m open to new opportunities and collaborations.</p>
