@@ -37,8 +37,8 @@ const Navbar = () => {
                         <span className="code-font text-green-400">&lt;Pharunmony chheng/&gt;</span>
                     </div>
                     <div className="hidden md:flex space-x-8">
-                        <Link href="#home" className="hover:text-green-400 transition-colors">Me</Link>
-                        <Link href="#about" className="hover:text-green-400 transition-colors">Experinces</Link>
+                        <Link href="#about" className="hover:text-green-400 transition-colors">Me</Link>
+                        <Link href="#experinces" className="hover:text-green-400 transition-colors">Experinces</Link>
                         <Link href="#courses" className="hover:text-green-400 transition-colors">Projects</Link>
                         <Link href="#projects" className="hover:text-green-400 transition-colors">Education</Link>
                         <Link href="#skills" className="hover:text-green-400 transition-colors">Skills</Link>
@@ -51,8 +51,8 @@ const Navbar = () => {
             {mobileMenuOpen && (
                 <div className="md:hidden bg-black/90 backdrop-blur-md">
                     <div className="px-6 py-4 space-y-4">
-                        <Link href="#home" className="block hover:text-green-400 transition-colors" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-                        <Link href="#about" className="block hover:text-green-400 transition-colors" onClick={() => setMobileMenuOpen(false)}>About</Link>
+                        <Link href="#about" className="block hover:text-green-400 transition-colors" onClick={() => setMobileMenuOpen(false)}>Me</Link>
+                        <Link href="#experinces" className="block hover:text-green-400 transition-colors" onClick={() => setMobileMenuOpen(false)}>Experinces</Link>
                         <Link href="#courses" className="block hover:text-green-400 transition-colors" onClick={() => setMobileMenuOpen(false)}>Courses</Link>
                         <Link href="#projects" className="block hover:text-green-400 transition-colors" onClick={() => setMobileMenuOpen(false)}>Projects</Link>
                         <Link href="#skills" className="block hover:text-green-400 transition-colors" onClick={() => setMobileMenuOpen(false)}>Skills</Link>
