@@ -3,9 +3,7 @@ import HeroSection from './ui/HeroSection';
 import AboutSection from './ui/AboutSection';
 import WorkingJournetSection from './ui/WorkingJourneySection'
 import ProjectsSection from './ui/ProjectsSection';
-import SkillsSection from './ui/SkillsSection';
 import SectionDivider from './ui/SectionDivider';
-import SkillSection from "./ui/SkillSection";
 import ContactSection from "./ui/ContactSection";
 import EducationSection from "./ui/EducationSection"
 
