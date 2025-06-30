@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const HeroSection = () => {
     const [typingText, setTypingText] = useState('');
-    const fullText = 'I build accessible, pixel-perfect digital experiences for Mobile Banking for Woori Bank & Prince Bank Cambodia';
+    const fullText = 'I build accessible, pixel-perfect digital experiences Mobile Banking for Woori Bank & Prince Bank Cambodia';
     const typingSpeed = 100;
 
     useEffect(() => {

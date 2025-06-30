@@ -33,7 +33,7 @@ const WorkingJournetSection = () => {
                                                 <a href="https://www.princebank.com.kh/digital/prince-mobilebiz"
                                                     className="text-teal-100 underline hover:text-teal-300 transition"
                                                     target="_blank" rel="noopener noreferrer">
-                                                    Mobile Biz
+                                                    MobileBiz
                                                 </a>
                                             </li>
                                         </ul>
