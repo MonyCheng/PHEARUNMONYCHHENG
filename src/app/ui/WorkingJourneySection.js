@@ -10,7 +10,7 @@ const WorkingJournetSection = () => {
                     <main className="space-y-10">
                         <section id="experience">
                             <div className="mb-12">
-                                <h3 className="text-xl font-bold text-slate-100 mb-4">Prince Bank Cambodia</h3>
+                                <h3 className="text-xl font-bold text-slate-100 mb-4">PRINCE Bank Cambodia</h3>
                                 <ol className="relative pl-6 space-y-10">
                                     <li className="relative pl-6">
                                         <span className="absolute left-0 top-1 w-4 h-4 timeline-dot-red rounded-full z-10" />
@@ -46,7 +46,7 @@ const WorkingJournetSection = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-slate-100 mb-4">Woori Bank Cambodia</h3>
+                                <h3 className="text-xl font-bold text-slate-100 mb-4">WOORI Bank Cambodia</h3>
                                 <ol className="relative pl-6 space-y-10">
                                     <li className="relative pl-6">
                                         <span className="absolute left-0 top-1 w-4 h-4 timeline-green-dot rounded-full z-10" />
