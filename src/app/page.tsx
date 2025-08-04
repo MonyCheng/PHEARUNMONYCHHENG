@@ -16,9 +16,9 @@ export default function Home() {
       <SectionDivider />
       <WorkingJournetSection />
       <SectionDivider />
-      <EducationSection />
-      <SectionDivider />
       <ProjectsSection />
+      <SectionDivider />
+      <EducationSection />
       <SectionDivider />
       <ContactSection />
     </header>

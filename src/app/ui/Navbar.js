@@ -1,20 +1,33 @@
-'use client'; // This component needs to run in the browser to use useState and useEffect
+'use client';
 
-import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-
-library.add(fas, fab);
 
 const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
+    };
+
+    // Smooth scroll function
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId.replace('#', ''));
+        if (element) {
+            const navbarHeight = 80; // Adjust based on your navbar height
+            const elementPosition = element.offsetTop - navbarHeight;
+
+            window.scrollTo({
+                top: elementPosition,
+                behavior: 'smooth'
+            });
+        }
+        setMobileMenuOpen(false); // Close mobile menu after clicking
+    };
+
+    // Handle click for navigation links
+    const handleNavClick = (e, href) => {
+        e.preventDefault();
+        scrollToSection(href);
     };
 
     useEffect(() => {
@@ -28,35 +41,68 @@ const Navbar = () => {
         };
     }, []);
 
+    const desktopNavItems = [
+        { href: '#about', label: 'Me' },
+        { href: '#experinces', label: 'Experinces' },
+        { href: '#projects', label: 'Projects' },
+        { href: '#education', label: 'Education' },
+        { href: '#contact', label: 'Contact' }
+    ];
+
+    const mobileNavItems = [
+        { href: '#about', label: 'Me' },
+        { href: '#experinces', label: 'Experinces' },
+        { href: '#courses', label: 'Courses' },
+        { href: '#projects', label: 'Projects' },
+        { href: '#contact', label: 'Contact' }
+    ];
+
     return (
         <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-gray-800">
             <div className="container mx-auto px-6 py-4">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                        <div className="w-3 h-3 bg-code-green rounded-full animate-pulse shadow-md shadow-code-green/50"></div>
-                        <span className="code-font text-green-400">&lt;Pharunmony chheng/&gt;</span>
+                        <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-md shadow-green-400/50"></div>
+                        <span className="font-mono text-green-400">&lt;Pharunmony chheng/&gt;</span>
                     </div>
+
+                    {/* Desktop Menu */}
                     <div className="hidden md:flex space-x-8">
-                        <Link href="#about" className="hover:text-green-400 transition-colors">Me</Link>
-                        <Link href="#experinces" className="hover:text-green-400 transition-colors">Experinces</Link>
-                        <Link href="#courses" className="hover:text-green-400 transition-colors">Projects</Link>
-                        <Link href="#projects" className="hover:text-green-400 transition-colors">Education</Link>
-                        <Link href="#skills" className="hover:text-green-400 transition-colors">Skills</Link>
+                        {desktopNavItems.map((item) => (
+                            <button
+                                key={item.href}
+                                onClick={(e) => handleNavClick(e, item.href)}
+                                className="hover:text-green-400 transition-colors duration-300 cursor-pointer text-white"
+                            >
+                                {item.label}
+                            </button>
+                        ))}
                     </div>
-                    <button className="md:hidden text-xl" onClick={toggleMobileMenu}>
-                        <FontAwesomeIcon icon={faBars} />
+
+                    <button
+                        className="md:hidden text-xl hover:text-green-400 transition-colors"
+                        onClick={toggleMobileMenu}
+                        aria-label="Toggle mobile menu"
+                    >
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
                     </button>
                 </div>
             </div>
+
             {mobileMenuOpen && (
-                <div className="md:hidden bg-black/90 backdrop-blur-md">
+                <div className="md:hidden bg-black/90 backdrop-blur-md border-t border-gray-700">
                     <div className="px-6 py-4 space-y-4">
-                        <Link href="#about" className="block hover:text-green-400 transition-colors" onClick={() => setMobileMenuOpen(false)}>Me</Link>
-                        <Link href="#experinces" className="block hover:text-green-400 transition-colors" onClick={() => setMobileMenuOpen(false)}>Experinces</Link>
-                        <Link href="#courses" className="block hover:text-green-400 transition-colors" onClick={() => setMobileMenuOpen(false)}>Courses</Link>
-                        <Link href="#projects" className="block hover:text-green-400 transition-colors" onClick={() => setMobileMenuOpen(false)}>Projects</Link>
-                        <Link href="#skills" className="block hover:text-green-400 transition-colors" onClick={() => setMobileMenuOpen(false)}>Skills</Link>
-                        <Link href="#contact" className="block hover:text-green-400 transition-colors" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+                        {mobileNavItems.map((item) => (
+                            <button
+                                key={item.href}
+                                onClick={(e) => handleNavClick(e, item.href)}
+                                className="block w-full text-left hover:text-green-400 transition-colors duration-300 py-2 text-white"
+                            >
+                                {item.label}
+                            </button>
+                        ))}
                     </div>
                 </div>
             )}
