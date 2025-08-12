@@ -1,71 +1,141 @@
 'use client';
-
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
+import { useColors } from '../contexts/ColorContext';
 
 const HeroSection = () => {
-    const [typingText, setTypingText] = useState('');
-    const fullText = 'I build accessible, pixel-perfect digital experiences Mobile Banking for WOORI Bank & PRINCE Bank Cambodia';
-    const typingSpeed = 100;
+    const [currentWord, setCurrentWord] = useState(0);
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    const { currentColors, activeColor, setActiveColor, colorPalette } = useColors();
+
+    const creativePhrases = [
+        "THINK DIFFERENT",
+        "CREATE MAGIC",
+        "BUILD DREAMS",
+        "CODE ART"
+    ];
+
+    const projects = [
+        {
+            title: "WOORI BANK",
+            category: "iOS Banking Solution",
+            color: "#00D9FF",
+            angle: "8deg"
+        },
+        {
+            title: "PRINCE BANK",
+            category: "Financial Technology",
+            color: "#FF6B9D",
+            angle: "-5deg"
+        },
+    ];
 
     useEffect(() => {
-        let i = 0;
-        const timer = setInterval(() => {
-            if (i < fullText.length) {
-                setTypingText(fullText.substring(0, i + 1));
-                i++;
-            } else {
-                clearInterval(timer);
-            }
-        }, typingSpeed);
-
-        return () => clearInterval(timer);
+        const wordTimer = setInterval(() => {
+            setIsAnimating(true);
+            setTimeout(() => {
+                setCurrentWord(prev => (prev + 1) % creativePhrases.length);
+                setIsAnimating(false);
+            }, 300);
+        }, 2500);
+        return () => clearInterval(wordTimer);
     }, []);
 
     return (
-        <section id="home" className="hero-section min-h-screen flex items-center justify-center relative">
-            {/* Floating Code Elements */}
-            <div className="floating-code top-50 left-30" style={{ animationDelay: '-6s' }}>
-                var skills = [&apos;Swift&apos;, &apos;Flutter&apos;, &apos;Next.JS&apos;];
-            </div>
-            <div className="floating-code top-40 right-20" style={{ animationDelay: '-3s' }}>
-                func () &#123; return &apos;innovation&apos;; &#125;
-            </div>
-            <div className="floating-code bottom-32 left-20" style={{ animationDelay: '-2s' }}>
-                &lt;div className=&quot;developer-mindset&quot;&gt;
-            </div>
-            <div className="floating-code bottom-20 right-10" style={{ animationDelay: '-4s' }}>
-                git commit -m &quot;Level up complete&quot;
-            </div>
+        <section className="section-fullscreen">
+            <div className="container mx-auto px-12 w-full">
+                <div className="grid lg:grid-cols-12 gap-16 items-center h-full">
+                    {/* Left Content */}
+                    <div className="lg:col-span-7 space-y-8">
+                        <div className="space-y-6">
+                            <div className="space-y-4">
+                                <div className="hero-title">
+                                    iOS Engineering
+                                </div>
 
-            <div className="text-center z-10 max-w-4xl mx-auto px-6">
-                <div className="mb-6">
-                    <span className="code-font text-green-400 text-lg">&lt;-----/&gt;</span>
+                                <div className="relative h-16 overflow-hidden">
+                                    <div
+                                        className={`hero-subtitle transition-all duration-500 transform ${isAnimating ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'
+                                            }`}
+                                        style={{ color: currentColors.secondary }}
+                                    >
+                                        {creativePhrases[currentWord]}
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center space-x-4">
+                                    <div className="accent-line w-12 transition-all duration-1000" />
+                                    <div className="accent-line-secondary w-6 transition-all duration-1000" />
+                                </div>
+                            </div>
+
+                            <div className="max-w-xl space-y-6">
+                                <p className="hero-description">
+                                    We believe in the power of simplicity. Every line of code,
+                                    every pixel, every interaction is carefully crafted to create
+                                    experiences that feel effortless yet profound.
+                                </p>
+
+                                <div className="flex items-center space-x-12">
+                                    <button className="btn-primary">
+                                        <span className="relative z-10">View Portfolio</span>
+                                    </button>
+
+                                    <button className="btn-secondary">
+                                        <span className="relative z-10">Start Project</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right Content - Projects */}
+                    <div className="lg:col-span-5 space-y-6">
+                        <div className="text-xs text-white uppercase tracking-widest mb-8">
+                            Work experiences
+                        </div>
+
+                        <div className="space-y-6">
+                            {projects.map((project, index) => (
+                                <div
+                                    key={index}
+                                    className="project-card"
+                                    style={{
+                                        transform: `rotate(${project.angle})`,
+                                        borderLeft: `4px solid ${project.color}`,
+                                    }}
+                                >
+                                    <div className="project-content">
+                                        <div className="project-category">{project.category}</div>
+                                        <div className="project-title">{project.title}</div>
+                                        <div
+                                            className="project-accent"
+                                            style={{ backgroundColor: project.color }}
+                                        />
+                                    </div>
+
+                                    <div
+                                        className="project-dot"
+                                        style={{ backgroundColor: project.color }}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
-                <h1 className="text-6xl md:text-8xl font-bold mb-6">
-                    <span className="gradient-text">iOS</span><br />
-                    <span className="neon-glow">Engineering</span>
-                </h1>
-                <div className="mb-6">
-                    <span className="code-font text-green-400 text-lg">&lt;-----/&gt;</span>
-                </div>
 
-                <div className="code-font text-xl md:text-2xl mb-8 text-gray-300">
-                    <span id="typingText" className="typing-animation">{typingText}</span>
-                </div>
-
-                <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-                    Passionate about creating innovative solutions through code. Currently
-                    modern web technologies and software development practices.
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Link href="#projects" className="border-2 border-green-400 px-8 py-4 rounded-full font-semibold hover:bg-green-400/10 transition-all duration-300">
-                        View My Work
-                    </Link>
-                    <Link href="#contact" className="border-2 border-green-400 px-8 py-4 rounded-full font-semibold hover:bg-green-400/10 transition-all duration-300">
-                        Get In Touch
-                    </Link>
+                {/* Color Switchers - Positioned at bottom */}
+                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+                    <div className="flex space-x-2">
+                        {colorPalette.map((palette, index) => (
+                            <button
+                                key={index}
+                                className={`color-switcher ${index === activeColor ? 'active' : ''}`}
+                                style={{ backgroundColor: palette.primary }}
+                                onClick={() => setActiveColor(index)}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

@@ -1,27 +1,34 @@
+import { ColorProvider } from './contexts/ColorContext';
+import BackgroundWrapper from './components/BackgroundWrapper';
 import Navbar from './ui/Navbar';
 import HeroSection from './ui/HeroSection';
 import AboutSection from './ui/AboutSection';
-import WorkingJournetSection from './ui/WorkingJourneySection'
+import WorkingJournetSection from './ui/WorkingJourneySection';
 import ProjectsSection from './ui/ProjectsSection';
 import SectionDivider from './ui/SectionDivider';
 import ContactSection from "./ui/ContactSection";
-import EducationSection from "./ui/EducationSection"
+import EducationSection from "./ui/EducationSection";
 
 export default function Home() {
   return (
-    <header className="bg-slate-900 text-slate-400">
-      <Navbar />
-      <HeroSection />
-      <AboutSection />
-      <SectionDivider />
-      <WorkingJournetSection />
-      <SectionDivider />
-      <ProjectsSection />
-      <SectionDivider />
-      <EducationSection />
-      <SectionDivider />
-      <ContactSection />
-    </header>
+    <ColorProvider>
+      <BackgroundWrapper>
+        <div className="text-slate-400">
+          <Navbar />
+          <HeroSection />
+          <SectionDivider />
+          <AboutSection />
+          <SectionDivider />
+          <WorkingJournetSection />
+          <SectionDivider />
+          <ProjectsSection />
+          <SectionDivider />
+          <EducationSection />
+          <SectionDivider />
+          <ContactSection />
+        </div>
+      </BackgroundWrapper>
+    </ColorProvider>
   )
 }
 

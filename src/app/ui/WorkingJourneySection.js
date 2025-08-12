@@ -1,11 +1,18 @@
+'use client';
+import React from 'react';
+import { useColors } from '../contexts/ColorContext';
 
 const WorkingJournetSection = () => {
+    const { currentColors } = useColors();
+
     return (
-        <section id="experinces" className="py-20 bg-gray-900/50">
-            <div className="min-h-screen bg-slate-900 text-slate-400 antialiased leading-relaxed selection:bg-teal-300 selection:text-teal-900">
-                <div className="max-w-5xl mx-auto px-6 py-12 font-sans">
+        <section id="experinces" className="">
+            <div className="container mx-auto px-6 w-full">
+                <div className="max-w-5xl mx-auto py-12 font-sans h-full flex flex-col justify-center">
                     <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-                        <span className="gradient-text">Experience</span>
+                        <span className="transition-all duration-1000 text-white" >
+                            Experience
+                        </span>
                     </h2>
                     <main className="space-y-10">
                         <section id="experience">
