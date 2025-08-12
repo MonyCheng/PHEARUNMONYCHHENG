@@ -255,22 +255,6 @@ const ProjectsSection = () => {
                             </div>
                         ))}
                     </div>
-
-                    {/* Bottom CTA */}
-                    <div className="text-center mt-20">
-                        <div className="inline-flex items-center gap-3 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-8 py-4 hover:bg-white/10 transition-all duration-300 group cursor-pointer">
-                            <span className="text-gray-300 font-medium">Want to see more projects?</span>
-                            <div
-                                className="flex items-center gap-2 transition-colors duration-300"
-                                style={{ color: currentColors.primary }}
-                            >
-                                <span className="font-semibold">View All</span>
-                                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
