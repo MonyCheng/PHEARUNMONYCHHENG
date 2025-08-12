@@ -3,7 +3,17 @@ import React from 'react';
 import { useColors } from '../contexts/ColorContext';
 
 const ContactSection = () => {
-    const { currentColors } = useColors();
+    const { colors } = useColors();
+
+    // Fallback colors in case context is not ready
+    const fallbackColors = {
+        primary: '#3B82F6',
+        secondary: '#1E40AF',
+        accent: '#60A5FA'
+    };
+
+    // Use fallback colors if colors is undefined
+    const safeColors = colors || fallbackColors;
 
     return (
         <section id="contact" className="pb-20">
@@ -22,7 +32,7 @@ const ContactSection = () => {
                             <h3 className="text-2xl font-semibold mb-6 transition-all duration-1000 text-gray-300">
                                 Contact Information
                             </h3>
-                            <p className="text-gray-300">Feel free to reach out! I'm open to new opportunities and collaborations.</p>
+                            <p className="text-gray-300">Feel free to reach out! I&apos;m open to new opportunities and collaborations.</p>
 
                             {/* Location */}
                             <div className="flex items-center space-x-3 text-gray-400">
@@ -69,9 +79,9 @@ const ContactSection = () => {
                                     rel="noopener noreferrer"
                                     className="text-gray-400 transition-all duration-300 hover:scale-110"
                                     style={{
-                                        '--hover-color': currentColors.primary
+                                        '--hover-color': safeColors.primary
                                     }}
-                                    onMouseEnter={(e) => e.target.style.color = currentColors.primary}
+                                    onMouseEnter={(e) => e.target.style.color = safeColors.primary}
                                     onMouseLeave={(e) => e.target.style.color = '#9ca3af'}
                                     aria-label="GitHub Profile"
                                 >
@@ -84,7 +94,7 @@ const ContactSection = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-400 transition-all duration-300 hover:scale-110"
-                                    onMouseEnter={(e) => e.target.style.color = currentColors.primary}
+                                    onMouseEnter={(e) => e.target.style.color = safeColors.primary}
                                     onMouseLeave={(e) => e.target.style.color = '#9ca3af'}
                                     aria-label="LinkedIn Profile"
                                 >
@@ -94,8 +104,6 @@ const ContactSection = () => {
                                 </a>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>

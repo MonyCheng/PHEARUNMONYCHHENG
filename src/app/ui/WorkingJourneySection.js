@@ -20,7 +20,10 @@ const WorkingJournetSection = () => {
                                 <h3 className="text-xl font-bold text-slate-100 mb-4">PRINCE Bank Cambodia</h3>
                                 <ol className="relative pl-6 space-y-10">
                                     <li className="relative pl-6">
-                                        <span className="absolute left-0 top-1 w-4 h-4 timeline-dot-red rounded-full z-10" />
+                                        <span
+                                            className="absolute left-0 top-1 w-4 h-4 rounded-full z-10 transition-all duration-1000"
+                                            style={{ backgroundColor: currentColors?.primary }}
+                                        />
                                         <span className="absolute left-[6px] top-7 w-px h-[calc(100%-1.25rem)] bg-slate-700" />
 
                                         <h5 className="text-lg font-semibold text-slate-200">Assistant Manager, iOS Engineering</h5>
@@ -56,7 +59,10 @@ const WorkingJournetSection = () => {
                                 <h3 className="text-xl font-bold text-slate-100 mb-4">WOORI Bank Cambodia</h3>
                                 <ol className="relative pl-6 space-y-10">
                                     <li className="relative pl-6">
-                                        <span className="absolute left-0 top-1 w-4 h-4 timeline-green-dot rounded-full z-10" />
+                                        <span
+                                            className="absolute left-0 top-1 w-4 h-4 rounded-full z-10 transition-all duration-1000"
+                                            style={{ backgroundColor: currentColors?.secondary }}
+                                        />
                                         <span className="absolute left-[6px] top-7 w-px h-[calc(100%-1.25rem)] bg-slate-700" />
 
                                         <h5 className="text-lg font-semibold text-slate-200">Senior Officer, Mobile Development</h5>
@@ -68,7 +74,10 @@ const WorkingJournetSection = () => {
                                     </li>
 
                                     <li className="relative pl-6">
-                                        <span className="absolute left-0 top-1 w-4 h-4 timeline-dot-purple rounded-full z-10" />
+                                        <span
+                                            className="absolute left-0 top-1 w-4 h-4 rounded-full z-10 transition-all duration-1000"
+                                            style={{ backgroundColor: currentColors?.accent }}
+                                        />
                                         <span className="absolute left-[6px] top-7 w-px h-[calc(100%-1.25rem)] bg-slate-700" />
                                         <h5 className="text-lg font-semibold text-slate-200">Junior Mobile Developer</h5>
                                         <p className="text-sm text-slate-200 mt-1">April 2022 – April 2024</p>

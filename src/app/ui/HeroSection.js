@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { useColors } from '../contexts/ColorContext';
 
 const HeroSection = () => {
@@ -8,12 +8,13 @@ const HeroSection = () => {
 
     const { currentColors, activeColor, setActiveColor, colorPalette } = useColors();
 
-    const creativePhrases = [
+    // Wrap creativePhrases in useMemo to prevent recreation on every render
+    const creativePhrases = useMemo(() => [
         "THINK DIFFERENT",
         "CREATE MAGIC",
         "BUILD DREAMS",
         "CODE ART"
-    ];
+    ], []);
 
     const projects = [
         {
@@ -25,7 +26,7 @@ const HeroSection = () => {
         {
             title: "PRINCE BANK",
             category: "Financial Technology",
-            color: "#FF6B9D",
+            color: "#2F388D", // Using your Prince Bank brand color
             angle: "-5deg"
         },
     ];
@@ -39,7 +40,7 @@ const HeroSection = () => {
             }, 300);
         }, 2500);
         return () => clearInterval(wordTimer);
-    }, []);
+    }, [creativePhrases.length]); // Add creativePhrases.length as dependency
 
     return (
         <section className="section-fullscreen">
@@ -57,7 +58,7 @@ const HeroSection = () => {
                                     <div
                                         className={`hero-subtitle transition-all duration-500 transform ${isAnimating ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'
                                             }`}
-                                        style={{ color: currentColors.secondary }}
+                                        style={{ color: currentColors?.secondary }}
                                     >
                                         {creativePhrases[currentWord]}
                                     </div>
@@ -127,7 +128,7 @@ const HeroSection = () => {
                 {/* Color Switchers - Positioned at bottom */}
                 <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
                     <div className="flex space-x-2">
-                        {colorPalette.map((palette, index) => (
+                        {colorPalette && colorPalette.map((palette, index) => (
                             <button
                                 key={index}
                                 className={`color-switcher ${index === activeColor ? 'active' : ''}`}

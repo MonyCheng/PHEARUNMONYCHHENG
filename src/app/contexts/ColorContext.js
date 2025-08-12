@@ -1,5 +1,5 @@
 'use client';
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState, useMemo } from 'react';
 
 const ColorContext = createContext();
 
@@ -16,12 +16,13 @@ export const ColorProvider = ({ children }) => {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
     const [shapes, setShapes] = useState([]);
 
-    const colorPalette = [
+    // Wrap colorPalette in useMemo to prevent recreation on every render
+    const colorPalette = useMemo(() => [
         { primary: '#00D9FF', secondary: '#FF6B9D', accent: '#C77DFF' },
         { primary: '#FF9500', secondary: '#00F5FF', accent: '#39FF14' },
         { primary: '#FF1744', secondary: '#00BCD4', accent: '#FFEB3B' },
         { primary: '#9C27B0', secondary: '#4CAF50', accent: '#FF5722' }
-    ];
+    ], []);
 
     // Auto color change
     useEffect(() => {
@@ -29,7 +30,7 @@ export const ColorProvider = ({ children }) => {
             setActiveColor(prev => (prev + 1) % colorPalette.length);
         }, 3000);
         return () => clearInterval(colorTimer);
-    }, []);
+    }, [colorPalette.length]); // Add colorPalette.length as dependency
 
     // Update CSS custom properties
     useEffect(() => {
@@ -39,7 +40,7 @@ export const ColorProvider = ({ children }) => {
         root.style.setProperty('--current-primary', currentColors.primary);
         root.style.setProperty('--current-secondary', currentColors.secondary);
         root.style.setProperty('--current-accent', currentColors.accent);
-    }, [activeColor, colorPalette]);
+    }, [activeColor, colorPalette]); // Add colorPalette as dependency
 
     // Generate floating shapes
     useEffect(() => {
@@ -57,7 +58,7 @@ export const ColorProvider = ({ children }) => {
         };
 
         generateShapes();
-    }, [activeColor]);
+    }, [activeColor, colorPalette]); // Add colorPalette as dependency
 
     // Mouse tracking
     useEffect(() => {
@@ -78,6 +79,7 @@ export const ColorProvider = ({ children }) => {
         setActiveColor,
         colorPalette,
         currentColors,
+        colors: currentColors, // Add this alias for your components that expect 'colors'
         mousePos,
         shapes
     };
